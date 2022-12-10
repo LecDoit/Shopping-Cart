@@ -1,0 +1,31 @@
+*{
+    /* border: 1px solid black; */
+    color:white;
+    margin:0px;
+    
+}
+
+#nav{
+    /* background-color: rgb(165, 214, 235); */
+
+
+
+}
+#home--page--button,#shop--page--button{
+    display:flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+    height:100%
+
+}
+
+.button{
+    border:none;
+    width:10vw;
+    height: 5vh;
+    background-color:transparent;
+    border:black 1px solid;
+
+
+}
