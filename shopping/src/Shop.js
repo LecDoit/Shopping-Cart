@@ -34,7 +34,7 @@ const Shop = () =>{
     let shopStyle ={
         display:"grid",
         gridTemplateColumns: '1fr 1fr',
-        // gridTemplateRows: "1fr 1fr",
+
         justifyContent : 'center',
         alignItems:"center",
         gap: "50px",

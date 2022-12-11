@@ -9,21 +9,6 @@ const Navbar = () =>{
 
     const [hei, setHei] = useState('1vh')
 
-// function hoverOver(event){
-    
-//         if (event.target._reactName='onMouseEnter'){
-
-//             console.log('red')
-            
-//         } else if (event.target.className=='onMouseOver'){
-
-//             console.log('green')
-//         };
-
-//         console.log(event._reactName)
-
-      
-//         };
 
 
     return(
@@ -33,14 +18,15 @@ const Navbar = () =>{
             display: "grid",
             gridTemplateColumns: '1fr 1fr',
             textAlign: "center",
-            // height: "10vh",
-            height: `${hei}`,
+
             justifyContent:"center",
-            // transition: "height 1s ease-out 1s";
+
 
             
-        }} id="nav"onMouseEnter={()=> setHei('10vh')}
-             onMouseLeave={()=> setHei('1vh')} >
+        }} id="nav"
+        onMouseEnter={()=> setHei('10vh')}
+             onMouseLeave={()=> setHei('1vh')} 
+             >
                 <Link to={"/"}>
                     <div  id="home--page--button">Home Page</div>
                 </Link>

@@ -7,8 +7,7 @@ const Landing = () =>{
     let btnStyle = {
         backgroundColor:'rgb(1, 1, 1, 0.6)',
         width:"200px",
-        // display:'block',
-        // margin:'left',
+
         fontSize: "1vw",
 
     }
@@ -17,7 +16,7 @@ const Landing = () =>{
     return(
 
         <div style={{
-            // backgroundImage: `url(${background})`,
+
             height:"100vh",
             color: 'white',
             fontSize:`3vw`,

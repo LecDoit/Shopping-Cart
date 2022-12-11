@@ -1,40 +1,47 @@
+import React, {useState, useEffect} from "react"
+import {CSSTransition} from 'react-transition-group'
+import './sidebar.css'
+
 const Sidebar = (props) =>{
 
-    let sbStyle = {
-        position: 'fixed',
-        right:"10px",
-        display:'grid',
-        backgroundColor: "rgb(244,244,244,0.2)",
-        gap:'50px'
-    }
+    const [activeSide, setActiveSide] = useState('main')
+
 
     let btnStyle = {
         backgroundColor:'rgb(1, 1, 1, 0.6)',
         width:"200px",
-        // display:'block',
-        // margin:'left',
+
         fontSize: "1vw",
 
     }
     return(
-        <div style={sbStyle}>
-            <div>Items in Cart:
-                {(props.cart.length)}
+        <div>
+
+            <CSSTransition 
+            in={activeSide==='main'}
+            unmountOnExit
+            timeout={500}
+            classNames='menu-primary' >
+            
+            <div className='menu'>
+                <div>Items in Cart:
+                    {(props.cart.length)}
+                </div>
+
+
+                <div>
+                    {props.cart.map(item=>(
+                        <div key={item + Math.random()}>{item}</div>
+                    ))}
+                </div>
+
+                <div>
+                    Total Value: {props.bucket}
+                </div>
+                <button style={btnStyle}
+                >Pay</button>
             </div>
-
-
-            <div>
-                {props.cart.map(item=>(
-                    <div key={item + Math.random()}>{item}</div>
-                ))}
-            </div>
-
-            <div>
-                Total Value: {props.bucket}
-            </div>
-            <button style={btnStyle}
-            >Pay</button>
-
+            </CSSTransition>
         </div>
     )
 }
